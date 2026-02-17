@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sanara Vitalis - Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="img/logo.png" width="200">
+
+        <h1>Sanara Vitalis</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <button onclick="mostrarCarrito()">🛒 (<span id="contador">0</span>)</button>
+    </nav>
+</header>
+
+<section class="productos">
+
+    <!-- Gorro -->
+    <div class="producto">
+        <h2>Gorro</h2>
+        <img src="img/gorro.png" class="img-producto">
+        <p>$10</p>
+        <select id="tallaGorro">
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+        </select>
+        <select id="colorGorro">
+            <option>HotPink</option>
+            <option>LightPink</option>
+        </select>
+        <button onclick="agregarCarrito('Gorro',10,'tallaGorro','colorGorro')">
+            Agregar
+        </button>
+    </div>
+
+    <!-- Zapatos -->
+    <div class="producto">
+        <h2>Zapatos</h2>
+       <img src="img/zapatos.png" class="img-producto">
+        <p>$40</p>
+        <select id="tallaZapatos">
+            <option>35</option>
+            <option>36</option>
+            <option>37</option>
+            <option>38</option>
+            <option>39</option>
+        </select>
+        <select id="colorZapatos">
+            <option>Blanco</option>
+        </select>
+        <button onclick="agregarCarrito('Zapatos',40,'tallaZapatos','colorZapatos')">
+            Agregar
+        </button>
+    </div>
+
+    <!-- Bata -->
+    <div class="producto">
+        <h2>Bata</h2>
+        <img src="img/bata.png" class="img-producto">
+        <p>$35</p>
+        <select id="tallaBata">
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+        </select>
+        <select id="colorBata">
+            <option>HotPink</option>
+            <option>LightPink</option>
+        </select>
+        <button onclick="agregarCarrito('Bata',35,'tallaBata','colorBata')">
+            Agregar
+        </button>
+    </div>
+
+    <!-- Chaleco -->
+    <div class="producto">
+        <h2>Chaleco</h2>
+        <img src="img/chaleco.png" class="img-producto">
+        <p>$30</p>
+        <select id="tallaChaleco">
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+        </select>
+        <select id="colorChaleco">
+            <option>Negro</option>
+            <option>Gris</option>
+        </select>
+        <button onclick="agregarCarrito('Chaleco',30,'tallaChaleco','colorChaleco')">
+            Agregar
+        </button>
+    </div>
+
+    <!-- Chaqueta -->
+    <div class="producto">
+        <h2>Chaqueta</h2>
+        <img src="img/chaqueta.png" class="img-producto">
+        <p>$60</p>
+        <select id="tallaChaqueta">
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+        </select>
+        <select id="colorChaqueta">
+            <option>Negro</option>
+            <option>Azul</option>
+            <option>Rojo</option>
+        </select>
+        <button onclick="agregarCarrito('Chaqueta',60,'tallaChaqueta','colorChaqueta')">
+            Agregar
+        </button>
+    </div>
+
+</section>
+
+<div id="carrito" class="carrito">
+    <h2>Carrito</h2>
+    <ul id="listaCarrito"></ul>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
